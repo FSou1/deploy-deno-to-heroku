@@ -24,6 +24,6 @@ app.use(router.allowedMethods());
 
 app.addEventListener('listen', () => console.log('Running..'));
 
-const DEFAULT_PORT = 8000;
-const argPort = parse(Deno.args).port;
-await app.listen({ port: argPort ?? DEFAULT_PORT });
+const DEFAULT_PORT = 8000;
+const argPort = parse(Deno.args).port;
+await app.listen({ port: argPort ?? DEFAULT_PORT });
