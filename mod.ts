@@ -1,4 +1,4 @@
-import { Application, Router } from "./deps.ts";
+import { Application, Router, parse } from "./deps.ts";
 import { list } from "./handlers/list.ts";
 import { create } from "./handlers/create.ts";
 import { remove } from "./handlers/remove.ts";
@@ -24,4 +24,6 @@ app.use(router.allowedMethods());
 
 app.addEventListener('listen', () => console.log('Running..'));
 
-await app.listen({ port: 8000 });
+const DEFAULT_PORT = 8000;
+const argPort = parse(Deno.args).port;
+await app.listen({ port: argPort ?? DEFAULT_PORT });

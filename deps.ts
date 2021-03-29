@@ -13,3 +13,7 @@ export {
   getNumericDate,
   verify,
 } from "https://deno.land/x/djwt@v2.1/mod.ts";
+
+export {
+  parse
+} from 'https://deno.land/std/flags/mod.ts';
