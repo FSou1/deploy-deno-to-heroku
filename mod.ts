@@ -22,4 +22,6 @@ router
 app.use(router.routes());
 app.use(router.allowedMethods());
 
+app.addEventListener('listen', () => console.log('Running..'));
+
 await app.listen({ port: 8000 });
